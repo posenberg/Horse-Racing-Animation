@@ -16,6 +16,16 @@ import random
 
 A clearScreen function was created with the os module to make it usable for different systems.
 
+```python
+# this is called after every frame needs to be cleared on the terminal
+
+def clearScreen():
+    if os.name == 'posix': 
+        os.system('clear') 
+    elif os.name == 'nt': 
+        os.system('cls')
+
+```
                                                                                                                     
                                                                                                                              
               
